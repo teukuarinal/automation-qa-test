@@ -29,7 +29,7 @@ The objective of this task is to create and execute test cases for testing the l
      ```
 
 4. **Access the Login Page:**
-   - Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the login page of the web application.
+   - Open your web browser and go to [http://localhost:3000](http://localhost:3000) to ensure the login page of the web application is working.
 
 5. **Set Up Cypress:**
    - Ensure that Cypress is installed as a dev dependency. If not, install it using the following command:
