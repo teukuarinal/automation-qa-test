@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+</head>
+<body>
+    <h2>Forgot Password</h2>
+    <form id="forgotPasswordForm">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="emailError" style="color: red;"></span>
+        </div>
+        <button type="button" onclick="resetPassword()">Reset Password</button>
+    </form>
+
+    <script>
+        function resetPassword() {
+            var emailInput = document.getElementById("email").value;
+            var emailError = document.getElementById("emailError");
+            emailError.textContent = "";
+
+            if (emailInput.trim() === "") {
+                emailError.textContent = "Please input your email";
+                return;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput)) {
+                emailError.textContent = "Please input correct email";
+                return;
+            }
+
+            // Here you can add your logic to handle password reset
+            // For this example, let's just show an alert
+            alert("Password reset request sent to: " + emailInput);
+        }
+    </script>
+</body>
+</html>
