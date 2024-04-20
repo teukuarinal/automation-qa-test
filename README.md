@@ -3,6 +3,13 @@
 ## Objective
 The objective of this task is to create and execute test cases for testing the login functionality of a web application using Cypress.
 
+## Test Cases
+1. User successfully login with valid credentials
+2. User see error message when login with invalid credentials
+3. User see error message when login with empty credentials
+4. User can clear the text from the field after failed login
+5. Login component elements are present
+
 ## Instructions
 
 1. **Install Node.js:**
@@ -30,14 +37,18 @@ The objective of this task is to create and execute test cases for testing the l
      npm install cypress --save-dev
      ```
 
-6. **Write and Execute Test Cases:**
-   - Write clear and concise test scripts using Cypress' syntax to validate the login functionality based on the provided scenarios:
-     - Positive test case: Should login successfully with valid credentials.
-     - Negative test case: Should display an error message when logging in with invalid credentials.
-     - Boundary test case: Should display an error message when logging in with empty credentials.
-     - Additional test scenarios can be explored to demonstrate testing skills.
-   - Execute the test cases using Cypress and ensure they pass or fail as expected.
+6. **Execute Test Cases:**
+   - To execute the test cases from the terminal, run the following command:
+     ```
+     npx cypress run
+     ```
+     This command will run all your Cypress tests headlessly in the terminal.
 
-## Submission
-- Submit your Cypress test scripts along with the test report to your GitHub repository.
-- Ensure that your submission includes clear instructions on how to run the tests.
+   - Alternatively, you can open the Cypress Test Runner UI by running the following command in your terminal:
+     ```
+     npx cypress open
+     ```
+     Once Cypress Test Runner is launched, select E2E Testing and choose the browser.
+     Then you can select and run individual test scenarios interactively. This allows you to view the tests as they run in real-time and debug any issues.
+
+   - After the test execution is complete, Cypress will generate test result logs.
